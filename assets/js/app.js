@@ -163,6 +163,42 @@ const handleInitFancybox = function () {
     }
 }
 
+const handleTranslateService = function () {
+    if ($('#handleTranslateService').length && $('#handleTranslateService .handleTranslateServiceItem').length) {
+        $('#handleTranslateService .handleTranslateServiceItem').each(function () {
+            let innerHeightText = $(this).find('.handleTranslateServiceItemText').innerHeight();
+            $(this).css('--translate', innerHeightText + 'px');
+        });
+    }
+}
+
+const handleCounter = function () {
+    if ($('#handleCounter').length && $('#handleCounter .handleCounterItem').length) {
+        let i = 0;
+        $(window).scroll(function () {
+            let counterOffsetTop = $('#handleCounter').offset().top - window.innerHeight;
+            if (i === 0 && $(window).scrollTop() > counterOffsetTop) {
+                $('#handleCounter .handleCounterItem').each(function () {
+                    let counterItem = $(this),
+                        counterItemValue = counterItem.attr('data-value');
+                    $({countNum: counterItem.text()}).animate(
+                        {countNum: counterItemValue},
+                        {
+                            duration: 2000,
+                            easing: 'swing',
+                            step: function () {
+                                counterItem.text(Math.floor(this.countNum));
+                            },
+                            complete: function () {
+                                counterItem.html(this.countNum.toString());
+                            }
+                        });
+                });
+                i = 1;
+            }
+        });
+    }
+}
 
 $(function () {
     handleApplyCollapse($('#header-navigation > ul'), true, true);
@@ -174,4 +210,31 @@ $(function () {
     handleStickHeader();
     handleCopyValue();
     handleInitFancybox();
+
+    if ($('#slider-logos').length) {
+        new Swiper('#slider-logos .swiper', {
+            speed: 1000,
+            spaceBetween: 15,
+            autoplay: {
+                delay: 6000,
+                disableOnInteraction: true,
+            },
+            breakpoints: {
+                1359: {
+                    slidesPerView: 6.5,
+                },
+                768: {
+                    slidesPerView: 2.5,
+                },
+                375: {
+                    slidesPerView: 1.5,
+                },
+                320: {
+                    slidesPerView: 1,
+                }
+            },
+        });
+    }
+    handleTranslateService()
+    handleCounter();
 });

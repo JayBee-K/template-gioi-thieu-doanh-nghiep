@@ -235,6 +235,37 @@ $(function () {
             },
         });
     }
+
+    if ($('#slider-testimonials').length) {
+        new Swiper('#slider-testimonials .swiper', {
+            speed: 1000,
+            spaceBetween: 25,
+            autoplay: {
+                delay: 6000,
+                disableOnInteraction: true,
+            },
+            breakpoints: {
+                1359: {
+                    slidesPerView: 3,
+                },
+                768: {
+                    slidesPerView: 2.5,
+                },
+                375: {
+                    slidesPerView: 1.5,
+                },
+                320: {
+                    slidesPerView: 1,
+                }
+            },
+            pagination: {
+                el: '#slider-testimonials .slider-pagination',
+                type: 'bullets',
+                bulletClass: 'slider-pagination_item',
+                clickable: true,
+            }
+        });
+    }
     handleTranslateService()
     handleCounter();
 });

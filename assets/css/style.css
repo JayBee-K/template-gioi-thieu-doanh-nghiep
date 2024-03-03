@@ -12,8 +12,8 @@
 
 .slider-theme .slider-pagination .slider-pagination_item {
     background: transparent;
-    width: 26px;
-    height: 26px;
+    width: 30px;
+    height: 30px;
     border-radius: 50%;
     position: relative;
     border: 1px solid transparent;
@@ -23,8 +23,8 @@
 .slider-theme .slider-pagination .slider-pagination_item:before {
     position: absolute;
     content: "";
-    height: 7px;
-    width: 7px;
+    height: 10px;
+    width: 10px;
     border-radius: 50%;
     top: 50%;
     left: 50%;
@@ -79,6 +79,109 @@
 
 .section-gap {
     padding: 30px 0;
+}
+
+.section-hero .hero-item {
+    position: relative;
+}
+
+.section-hero .hero-item .hero-bg {
+    padding-top: calc(9 / 21 * 100%);
+}
+
+.section-hero .hero-item .hero-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    animation-fill-mode: forwards;
+    -webkit-backface-visibility: hidden;
+    opacity: 0 !important;
+    transform: translate3d(0, 70px, 0);
+    transition: transform .8s cubic-bezier(0, .195, 0, 1.465), opacity .5s ease-in;
+}
+
+.section-hero .swiper-slide-active .hero-item .hero-content {
+    animation-delay: .1s;
+    opacity: 1 !important;
+    transform: translateZ(0) scale(1);
+    will-change: filter, transform, opacity;
+}
+
+.section-hero .hero-item .hero-content .hero-content_sub {
+    margin-bottom: 20px;
+}
+
+.section-hero .hero-item .hero-content .hero-content_sub .hero-content_sub__inner {
+    font-size: 1em;
+    display: inline-block;
+    background: #ffffff33;
+    width: auto;
+    padding: 3px 15px 3px 3px;
+    border-radius: 20px;
+    border: 1px solid #ffffff8c;
+    text-transform: uppercase;
+    font-weight: 500;
+    line-height: 18px;
+    color: var(--bs-white);
+}
+
+.section-hero .hero-item .hero-content .hero-content_sub .hero-content_sub__inner > span {
+    background: var(--bs-white);
+    padding: 4px 14px;
+    border-radius: 20px;
+    color: var(--primary-color);
+    margin-right: 5px;
+    display: inline-block;
+}
+
+.section-hero .hero-item .hero-content .hero-content_title {
+    font-size: 4.5em;
+    color: var(--bs-white);
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.section-hero .hero-item .hero-content .hero-content_desc {
+    margin-top: 20px;
+    font-size: 1.15em;
+    color: #f1f1f1;
+}
+
+.section-hero .hero-item .hero-content .hero-content_button {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.section-hero .hero-item .hero-content .hero-content_button .button-theme_opacity {
+    background: transparent;
+}
+
+.section-hero .hero-item .hero-content .hero-content_button .button-theme_opacity:hover {
+    background: var(--primary-color);
+}
+
+.section-hero .slider-pagination {
+    left: 5%;
+    top: 50%;
+    transform: translateY(-50%);
+    bottom: unset;
+    z-index: 2;
+    flex-direction: column;
+    width: unset;
+}
+
+.section-hero .slider-pagination .slider-pagination_item:before {
+    background: var(--bs-white);
 }
 
 .section-introduction {
@@ -844,4 +947,47 @@
     text-align: center;
     color: rgba(255, 255, 255, .5);
     font-size: .925em;
+}
+
+.section-icons {
+    transform: translateY(-50%);
+    position: relative;
+    z-index: 2;
+    margin-bottom: -150px;
+}
+
+.icon-box {
+    background: var(--bs-white);
+    display: flex;
+    align-items: center;
+    padding: 25px 25px 35px 25px;
+    border-radius: 5px 5px 5px 5px;
+    box-shadow: 0 0 30px 0 rgb(0 0 0 / 12%);
+}
+
+.icon-box .icon-image {
+    width: 80px;
+    flex-shrink: 0;
+}
+
+.icon-box .icon-content {
+    padding-left: 15px;
+}
+
+.icon-box .icon-content .icon-content_title {
+    font-size: 1.3em;
+    color: #1b1d21;
+    font-weight: 700;
+    font-family: var(--font-heading);
+}
+
+.icon-box .icon-content .icon-content_desc {
+    font-size: 1.15em;
+    color: #5f5f5f;
+    line-height: 1.6;
+    margin-top: 3px;
+}
+
+.icon-box .icon-content .icon-content_desc p:last-child {
+    margin-bottom: 0;
 }

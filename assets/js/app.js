@@ -211,6 +211,28 @@ $(function () {
     handleCopyValue();
     handleInitFancybox();
 
+    if ($('#slider-hero').length) {
+        new Swiper('#slider-hero .swiper', {
+            speed: 1000,
+            autoplay: {
+                delay: 8000,
+                disableOnInteraction: true,
+            },
+            loop: true,
+            slidesPerView: 1,
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: true
+            },
+            pagination: {
+                el: '#slider-hero .slider-pagination',
+                type: 'bullets',
+                bulletClass: 'slider-pagination_item',
+                clickable: true,
+            }
+        });
+    }
+
     if ($('#slider-logos').length) {
         new Swiper('#slider-logos .swiper', {
             speed: 1000,

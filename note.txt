@@ -1,0 +1,12 @@
+Nhận tư vấn -> link liên hệ cùng hàng với menu
+Bỏ nút trên banner
+linkedin đổi thành zalo
+single team chỉ có thông tin về nhân sự và nội dung bài viết
+about us bỏ chữ ký, link card bài viết
+bỏ service tên menu, portfolios đổi vị trí với blogs
+All, Dịch vụ 1 -> 5
+
+card blog bỏ danh mục
+
+Danh mục tin tức: bỏ user, bỏ search, categories (lấy menu portfolios), bỏ tag, ảnh có link, list card lấy ở trang chủ
+Chi tiết bình luận facebook

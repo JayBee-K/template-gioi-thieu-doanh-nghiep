@@ -199,6 +199,22 @@ const handleCounter = function () {
         });
     }
 }
+const handleProgress = function () {
+    if ($('#handleProgress').length && $('#handleProgress .handleProgressItem').length) {
+        let i = 0;
+        $(window).scroll(function () {
+            let counterOffsetTop = $('#handleProgress').offset().top - window.innerHeight;
+            if (i === 0 && $(window).scrollTop() > counterOffsetTop) {
+                $('#handleProgress .handleProgressItem').each(function () {
+                    $(this).css("width", function () {
+                        return $(this).attr("data-value") + "%";
+                    })
+                });
+                i = 1;
+            }
+        });
+    }
+}
 
 $(function () {
     handleApplyCollapse($('#header-navigation > ul'), true, true);
@@ -293,4 +309,5 @@ $(function () {
     }
     handleTranslateService()
     handleCounter();
+    handleProgress();
 });

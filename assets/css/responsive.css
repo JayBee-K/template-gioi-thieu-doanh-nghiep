@@ -178,7 +178,8 @@
 		height: 60px;
 	}
 
-	.header .header-top .header-contact {
+	.header .header-top .header-contact,
+	.header .header-bottom .heading-button{
 		display: none;
 	}
 

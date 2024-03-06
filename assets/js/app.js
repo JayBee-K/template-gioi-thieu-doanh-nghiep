@@ -245,11 +245,14 @@ $(function () {
                 1359: {
                     slidesPerView: 6.5,
                 },
+                991: {
+                    slidesPerView: 4.5,
+                },
                 768: {
-                    slidesPerView: 2.5,
+                    slidesPerView: 3.5,
                 },
                 375: {
-                    slidesPerView: 1.5,
+                    slidesPerView: 2.5,
                 },
                 320: {
                     slidesPerView: 1,
@@ -261,7 +264,7 @@ $(function () {
     if ($('#slider-testimonials').length) {
         new Swiper('#slider-testimonials .swiper', {
             speed: 1000,
-            spaceBetween: 25,
+            spaceBetween: 15,
             autoplay: {
                 delay: 6000,
                 disableOnInteraction: true,
@@ -271,10 +274,10 @@ $(function () {
                     slidesPerView: 3,
                 },
                 768: {
-                    slidesPerView: 2.5,
+                    slidesPerView: 2,
                 },
                 375: {
-                    slidesPerView: 1.5,
+                    slidesPerView: 1,
                 },
                 320: {
                     slidesPerView: 1,

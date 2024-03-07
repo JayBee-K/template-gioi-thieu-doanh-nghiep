@@ -98,6 +98,10 @@
 	border-top: 1px dotted var(--bs-gray-200);
 }
 
+.header .header-button .button-theme_primary:hover {
+	background-color: var(--primary-hover);
+}
+
 .header.is-scroll {
 	transform: translateY(-70px);
 	-webkit-box-shadow: 0 6px 14px -6px rgba(24, 39, 75, 0.1), 0px 10px 32px -4px rgba(24, 39, 75, 0.075);
@@ -1274,7 +1278,7 @@
 	overflow: initial;
 	border-radius: var(--bs-progress-border-radius);
 	background: var(--primary-color);
-	transition: 3s linear all;
+	transition: 3s linear width;
 	height: 100%;
 	width: 0;
 }
@@ -1523,7 +1527,6 @@
 	visibility: visible;
 }
 
-
 .section-pagination {
 	margin-top: 30px;
 }
@@ -1560,4 +1563,98 @@
 
 .service-related {
 	padding: 50px 0 100px 0;
+}
+
+.section-introduction_progress {
+	padding: 160px 0;
+	background-repeat: no-repeat;
+	background-position-y: bottom;
+	background-position-x: 26%;
+}
+
+.section-introduction_main {
+	padding: 110px 0;
+	background-repeat: no-repeat;
+	background-position-x: center;
+	background-position-y: top;
+}
+
+.introduction-card {
+	border-radius: 6px;
+	-webkit-box-shadow: 8px 8px 30px 0 rgb(0 0 0 / 12%);
+	border: 0;
+	overflow: hidden;
+}
+
+.introduction-card .card-image {
+	position: relative;
+	overflow: hidden;
+}
+
+.introduction-card .card-image:before {
+	background: rgba(0, 0, 0, 0.271);
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	display: block;
+	content: "";
+	z-index: 2;
+	pointer-events: none;
+	opacity: 0;
+	transition: var(--transition-default);
+}
+
+.introduction-card .card-image img {
+	transition: var(--transition-default);
+}
+
+.introduction-card .card-body {
+	text-align: center;
+	padding: 30px 20px;
+}
+
+.introduction-card .card-body .card-title {
+	margin-bottom: 15px;
+}
+
+.introduction-card .card-body .card-title > a {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: 1.6em;
+	font-weight: 700;
+	color: var(--bs-black);
+}
+
+.introduction-card .card-body .card-text {
+	font-size: 1.15em;
+	line-height: 1.6;
+}
+
+.introduction-card .card-body .card-text p:last-child {
+	margin-bottom: 0;
+}
+
+.introduction-card .card-body .card-button{
+	margin-top: 25px;
+}
+
+.introduction-card:hover .card-image:before {
+	opacity: 1;
+	visibility: visible;
+}
+
+.introduction-card:hover .card-body .card-title > a {
+	color: var(--primary-color);
+}
+
+.introduction-card:hover .card-image img {
+	transform: scale(1.05);
+}
+
+.section-introduction_padding {
+	padding-top: 26px;
 }

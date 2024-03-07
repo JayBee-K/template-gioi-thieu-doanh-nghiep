@@ -1244,7 +1244,7 @@
 .section-progress {
 	display: flex;
 	flex-direction: column;
-	gap: 15px;
+	gap: 25px;
 }
 
 .section-progress .progress-item .progress-text {
@@ -1259,6 +1259,14 @@
 	height: 6px;
 	background: #5e5e5e;
 	position: relative;
+}
+
+.section-progress.section-progress_white .progress-item .progress-text {
+	color: var(--bs-black);
+}
+
+.section-progress.section-progress_white .progress-item .progress {
+	background-color: #d5d5d5;
 }
 
 .section-progress .progress-item .progress .progress-bar {
@@ -1427,7 +1435,7 @@
 	color: var(--bs-gray-800);
 }
 
-.detail-team .detail-team_content .detail-team_info .detail-team_info__item > a{
+.detail-team .detail-team_content .detail-team_info .detail-team_info__item > a {
 	color: inherit;
 }
 
@@ -1474,4 +1482,82 @@
 
 .detail-team .detail-team_content .detail-team_social .detail-team_social__item:hover {
 	opacity: .8;
+}
+
+.section-tabs {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 30px;
+	margin-bottom: 45px;
+}
+
+.section-tabs .button-tab {
+	padding: 8px 0;
+	font-size: 1.075em;
+	font-weight: 700;
+	color: #272933;
+	position: relative;
+}
+
+.section-tabs .button-tab:before {
+	height: 3px;
+	position: absolute;
+	background-color: var(--primary-color);
+	left: 0;
+	width: 100%;
+	bottom: 0;
+	transition: var(--transition-default);
+	opacity: 0;
+	visibility: hidden;
+	content: "";
+}
+
+.section-tabs .button-tab:hover:before {
+	opacity: 1;
+	visibility: visible;
+}
+
+.section-tabs .button-tab.active:before {
+	opacity: 1;
+	visibility: visible;
+}
+
+
+.section-pagination {
+	margin-top: 30px;
+}
+
+.section-pagination .pagination {
+	margin-bottom: 0;
+	justify-content: center;
+}
+
+.section-pagination .pagination .page-item {
+	margin: 0 4px;
+}
+
+.section-pagination .pagination .page-item .page-link {
+	border: 1px solid var(--bs-gray-300);
+	background-color: #f1f1f1;
+	color: var(--bs-gray-700);
+	margin-left: 0;
+	padding: 6px 12px 6px;
+	font-size: 1em;
+	border-radius: 6px;
+}
+
+.section-pagination .pagination .page-item .page-link:focus {
+	box-shadow: none;
+}
+
+.section-pagination .pagination .page-item.active .page-link,
+.section-pagination .pagination .page-item:hover .page-link {
+	border-color: var(--primary-color);
+	color: var(--bs-white);
+	background-color: var(--primary-color);
+}
+
+.service-related {
+	padding: 50px 0 100px 0;
 }

@@ -1111,6 +1111,7 @@
     float: none;
     margin-left: 8px;
     padding-right: 8px;
+    color: #f1f1f1;
 }
 
 .section-breadcrumb .breadcrumb .breadcrumb-item > a:hover {
@@ -1542,6 +1543,8 @@
     justify-content: center;
     gap: 30px;
     margin-bottom: 45px;
+    overflow-x: auto;
+    width: 100%;
 }
 
 .section-tabs .button-tab {
@@ -1550,6 +1553,7 @@
     font-weight: 700;
     color: #272933;
     position: relative;
+    white-space: nowrap;
 }
 
 .section-tabs .button-tab:before {
